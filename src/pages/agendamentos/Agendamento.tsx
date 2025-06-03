@@ -1,17 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-type Agendamento = {
-    id: number;
-    paciente: string;
-    horario: string;
-    data: string;
-};
-
-const agendamentosMock: Agendamento[] = [
-    { id: 1, paciente: 'Maria Silva', horario: '23:00', data: '2025-06-03' },
-    { id: 2, paciente: 'João Souza', horario: '23:01', data: '2025-06-03' },
-    { id: 3, paciente: 'Ana Lima', horario: '14:00', data: '2025-06-03' },
-];
+import { agendamentosMock, type Agendamento } from './AgendamentosMock';
 
 const AgendamentosDoDia: React.FC = () => {
     const [agendamentosHoje, setAgendamentosHoje] = useState<Agendamento[]>([]);
@@ -24,18 +13,21 @@ const AgendamentosDoDia: React.FC = () => {
     }, []);
 
     return (
-        <div className="bg-white p-6 rounded shadow w-full ml-50 min-h-screen pb-20">
+        <div className="bg-white p-6 rounded shadow min-h-screen pb-20 ml-50">
             <h2 className="text-xl font-bold mb-4">Agendamentos do Dia</h2>
+
             {agendamentosHoje.length > 0 ? (
-                <div className="flex gap-4 overflow-x-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 pr-6">
                     {agendamentosHoje.map((ag) => (
                         <div
                             key={ag.id}
-                            className="min-w-[200px] border rounded-lg p-4 shadow hover:shadow-md transition"
+                            className="border rounded-lg p-4 shadow hover:shadow-md transition"
                         >
                             <h3 className="font-semibold text-lg">{ag.paciente}</h3>
                             <p className="text-gray-600">Horário: {ag.horario}</p>
                             <p className="text-gray-500 text-sm">Data: {ag.data}</p>
+                            <p className="text-gray-500 text-sm font-semibold">Especialidade: {ag.especialidade}</p>
+                            <p className="text-gray-600 font-semibold">Médico: {ag.medico}</p>
                         </div>
                     ))}
                 </div>
@@ -45,6 +37,5 @@ const AgendamentosDoDia: React.FC = () => {
         </div>
     );
 };
-
 
 export default AgendamentosDoDia;

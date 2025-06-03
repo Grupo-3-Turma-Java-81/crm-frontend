@@ -6,7 +6,7 @@ function Navbar() {
         <div className='h-screen w-50 bg-gray-200 text-blue-950 flex flex-col p-6 fixed'>
 
             <Link to='/' className="flex justify-center mb-10">
-                <img src="./src/assets/logo-sem-fundo.png"
+                <img src="./src/assets/logo/logo-sem-fundo.png"
                 alt="Logo Clínica Médica Gen"
                 className="w-20 h-20" />
             </Link>

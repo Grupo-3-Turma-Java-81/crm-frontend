@@ -1,28 +1,50 @@
-import AgendamentosDoDia from "../agendamentos/Agendamento"
+import React from "react";
 
-function Home() {
+import UltimasNoticias from "./UltimasNoticias";
+import { agendamentosMock } from "../agendamentos/AgendamentosMock";
+
+const Home: React.FC = () => {
     return (
-        <>
-            <div className="flex justify-center p-4">
-                <div className='container grid grid-cols-2 text-black'>
-                    <div className="flex justify-around gap-4">
-                        <div className="flex justify-around gap-4 font-bold">
-                            <button
-                                className='border rounded px-4 py-2 hover:bg-gray-200 text-blue-950'>
-                                Novo Agendamento
-                            </button>
-                        </div>
-                    </div>
+        <div className="flex flex-col min-h-screen bg-gray-50 pl-64 pt-20">
+            <div className="container mx-auto px-8 space-y-4">
 
-
-                    <div className="flex flex-col gap-4 items-center justify-center py-4">
-                    <AgendamentosDoDia/>
+                <div className="bg-white rounded-lg shadow-sm p-4">
+                    <div className="flex justify-start">
+                        <button className="bg-[#D91147] text-white px-6 py-2 rounded-md 
+                                            hover:bg-[#B30E3C] transition-colors font-semibold">
+                            Novo Agendamento
+                        </button>
                     </div>
                 </div>
+
+                <div className="bg-white rounded-lg shadow-sm p-4 w-full">
+                    <h2 className="text-xl font-bold text-gray-800 mb-2">
+                        Agendamentos do Dia
+                    </h2>
+                    <div className="overflow-x-auto">
+                        <div className="flex space-x-4 min-w-fit">
+                            {agendamentosMock.map((ag, idx) => (
+                                <div
+                                    key={idx}
+                                    className="min-w-[250px] border rounded-md p-4 bg-white shadow-sm"
+                                >
+                                    <p className="font-bold">{ag.paciente}</p>
+                                    <p>Horário: {ag.horario}</p>
+                                    <p>Data: {ag.data}</p>
+                                    <p>Especialidade: {ag.especialidade}</p>
+                                    <p className="font-semibold text-gray-800">
+                                        Médico: {ag.medico}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                < UltimasNoticias />
             </div>
+        </div>
+    );
+};
 
-        </>
-    )
-}
-
-export default Home
+export default Home;
