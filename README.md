@@ -1,54 +1,44 @@
-# React + TypeScript + Vite
+Clínica Médica Gen Health Care - Sistema de Gerenciamento de Pacientes e Médicos
+Projeto desenvolvido como parte do Desafio 1 do Projeto Integrador (Frontend), com foco em criar uma página web funcional para auxiliar no gerenciamento de pacientes e médicos em clínicas de pequeno e médio porte.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🏥 Descrição do Projeto
+A Clínica Médica Gen Health Care é um sistema simples e eficiente de cadastro, consulta, atualização e exclusão de agendamento de pacientes e médicos. Voltado para o uso interno de clínicas, o objetivo é substituir métodos manuais de organização por uma solução digital ágil e segura.
 
-Currently, two official plugins are available:
+🎯 Objetivo
+Automatizar o gerenciamento de dados básicos em clínicas médicas, melhorando a organização do ambiente de trabalho, reduzindo erros e aumentando a eficiência no atendimento.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👥 Público-alvo
+Secretárias, recepcionistas, médicos e administradores de clínicas que buscam uma solução prática para gerenciar seus cadastros.
 
-## Expanding the ESLint configuration
+❗ Problema que o projeto visa resolver:
+Muitas clínicas ainda utilizam fichas físicas ou planilhas para armazenar dados, o que pode resultar em atrasos, perda de informações e retrabalho. Este sistema busca solucionar esse problema com uma interface simples e funcional.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🗃️ Agendamento de Consulta
+Nome do Paciente: Ex: João da Costa
+Hora: Horário do agendamento da consulta
+Data: Data em que se realizará a consulta
+Médico: Nome do profissional que atenderá o paciente
+Especialidade: Consulta de que vai passar. Ex: Cardiologista, Pediatra
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+💻 Tecnologias Utilizadas
+Tecnologia	Descrição
+React	Criação de interfaces de usuários 
+TypeScript	Adicionar tipagem estática 
+CSS	Linguagem de estilização 
+Vite	Servidor de desenvolvimento local
+Trello	Organização e gerenciamento das tarefas do projeto
+🧪 Testes
+As funcionalidades foram testadas diretamente na página WEB, por meio de cadastrar um novo agendamento médico.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+👨‍💻 Integrantes do Grupo
+Nome	Função	GitHub
+Camila Lima	Desenvolvedora	camilalimas
+João Andrade	Tester	JoaoAndrade-dev
+Karina Camargo	Desenvolvedora	araujokahh
+Luan Lazarine	Product Owner	Lazarine1996
+Pamela Oliveira	Desenvolvedora heypamela
+Vitor Teles	Desenvolvedor	VitorGabrielTeles
+📅 Projeto iniciado em: 03/06/2025
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+📌 Observações
+Este projeto é voltado para fins educacionais e representa uma solução inicial de interação com o usuário.
