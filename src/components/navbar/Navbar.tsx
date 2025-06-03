@@ -3,7 +3,7 @@ import { Home, Users, Pill } from "lucide-react";
 
 function Navbar() {
     return (
-        <div className='h-screen w-64 bg-gray-200 text-blue-950 flex flex-col p-6 fixed'>
+        <div className='h-screen w-44 bg-gray-200 text-blue-950 flex flex-col p-6 fixed'>
 
             <Link to='/' className="flex justify-center mb-10">
                 <img src="./src/assets/logo-gen.png"
