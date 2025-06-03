@@ -1,6 +1,12 @@
-import { agendamentosMock } from "./AgendamentosMock";
+import { Link, useNavigate } from "react-router-dom";
 
 function AgendamentosForm() {
+
+    const navigate = useNavigate();
+    const alertCadastrado = () => {  
+        alert('Agendamento realizado com sucesso!');
+        navigate('/home');
+    }
 
     return (
         <form className="p-4  rounded max-w-md mx-auto shadow">
@@ -49,11 +55,14 @@ function AgendamentosForm() {
                 />
             </div>
 
-            <button className="bg-[#D91147] text-white px-6 py-2 rounded-md 
+            <Link to='/home' className='flex items-center gap-2 hover:underline'>
+                <button onClick={alertCadastrado} className="bg-[#D91147] text-white px-6 py-2 rounded-md 
                                             hover:bg-[#B30E3C] transition-colors font-semibold">
 
-                Agendar
-            </button>
+                    Agendar
+                </button>
+            </Link>
+
         </form>
     );
 };
