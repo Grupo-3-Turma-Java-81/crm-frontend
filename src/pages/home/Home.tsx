@@ -2,6 +2,7 @@ import React from "react";
 
 import UltimasNoticias from "./UltimasNoticias";
 import { agendamentosMock } from "../agendamentos/AgendamentosMock";
+import { Link } from "react-router-dom";
 
 const Home: React.FC = () => {
     return (
@@ -12,7 +13,9 @@ const Home: React.FC = () => {
                     <div className="flex justify-start">
                         <button className="bg-[#D91147] text-white px-6 py-2 rounded-md 
                                             hover:bg-[#B30E3C] transition-colors font-semibold">
-                            Novo Agendamento
+                            <Link to='/novoagendamento' className='flex items-center gap-2 hover:underline'>
+                                <span className="font-bold">Novo Agendamento</span>
+                            </Link>
                         </button>
                     </div>
                 </div>

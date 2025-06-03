@@ -6,6 +6,7 @@ import Footer from './components/footer/Footer';
 import Navbar from './components/navbar/Navbar';
 import SobreNos from './pages/sobre-nos/SobreNos';
 import AgendamentosDoDia from './pages/agendamentos/Agendamento';
+import AgendamentosForm from './pages/agendamentos/AgendamentosForm';
 
 function App() {
     return (
@@ -19,6 +20,8 @@ function App() {
                         < Route path="/home" element={< Home />} />
                         < Route path="/sobre-nos" element={< SobreNos />} />
                         < Route path="/agendamento" element={< AgendamentosDoDia />} />
+                        < Route path="/novoagendamento" element={< AgendamentosForm />} />
+
                     </Routes>
                 </div>
 
