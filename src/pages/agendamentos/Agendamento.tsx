@@ -8,8 +8,8 @@ type Agendamento = {
 };
 
 const agendamentosMock: Agendamento[] = [
-    { id: 1, paciente: 'Maria Silva', horario: '23:00', data: '2025-06-02' },
-    { id: 2, paciente: 'João Souza', horario: '23:01', data: '2025-06-02' },
+    { id: 1, paciente: 'Maria Silva', horario: '23:00', data: '2025-06-03' },
+    { id: 2, paciente: 'João Souza', horario: '23:01', data: '2025-06-03' },
     { id: 3, paciente: 'Ana Lima', horario: '14:00', data: '2025-06-03' },
 ];
 
@@ -18,13 +18,13 @@ const AgendamentosDoDia: React.FC = () => {
 
     useEffect(() => {
         const hoje = new Date();
-        const dataLocal = hoje.toLocaleDateString('sv-SE'); 
+        const dataLocal = hoje.toLocaleDateString('sv-SE');
         const filtrados = agendamentosMock.filter((ag) => ag.data === dataLocal);
         setAgendamentosHoje(filtrados);
     }, []);
 
     return (
-        <div className="bg-white p-6 rounded shadow w-full">
+        <div className="bg-white p-6 rounded shadow w-full ml-50 min-h-screen pb-20">
             <h2 className="text-xl font-bold mb-4">Agendamentos do Dia</h2>
             {agendamentosHoje.length > 0 ? (
                 <div className="flex gap-4 overflow-x-auto">
@@ -45,5 +45,6 @@ const AgendamentosDoDia: React.FC = () => {
         </div>
     );
 };
+
 
 export default AgendamentosDoDia;

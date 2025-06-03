@@ -1,4 +1,4 @@
-import AgendamentosDoDia from "../produto/Produto"
+import AgendamentosDoDia from "../agendamentos/Agendamento"
 
 function Home() {
     return (

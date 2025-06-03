@@ -2,7 +2,8 @@ import { equipe } from "./Equipe";
 
 function SobreNos() {
     return (
-        <div className="min-h-screen ml-[200px] p-8">
+            <div className="min-h-screen ml-50 p-8 pb-20">
+
             <h1 className="text-3xl font-bold text-center mb-10 text-blue-950">Sobre Nós</h1>
 
             <div className="flex items-center gap-6">
@@ -10,7 +11,7 @@ function SobreNos() {
                     <img
                         src="./src/assets/logo-gen.png"
                         alt="Logo Gen Clínica Médica"
-                        className="w-24 h-24 rounded-full object-cover border-2 border-gray-300 shadow-md"
+                        className="w-24 h-24 object-cover border-2 border-gray-300 shadow-md"
                     />
                     <p className="text-gray-700 text-justify">
                         O sistema da Clínica Médica Gen é simples e eficiente de cadastro, consulta,

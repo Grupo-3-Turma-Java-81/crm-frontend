@@ -5,7 +5,7 @@ import Home from './pages/home/Home';
 import Footer from './components/footer/Footer';
 import Navbar from './components/navbar/Navbar';
 import SobreNos from './pages/sobre-nos/SobreNos';
-import AgendamentosDoDia from './pages/produto/Produto';
+import AgendamentosDoDia from './pages/agendamentos/Agendamento';
 
 function App() {
     return (
@@ -18,7 +18,7 @@ function App() {
                         < Route path="/" element={< Home />} />
                         < Route path="/home" element={< Home />} />
                         < Route path="/sobre-nos" element={< SobreNos />} />
-                        < Route path="/produto" element={< AgendamentosDoDia />} />
+                        < Route path="/agendamento" element={< AgendamentosDoDia />} />
                     </Routes>
                 </div>
 
